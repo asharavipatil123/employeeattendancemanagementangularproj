@@ -1,0 +1,30 @@
+img{
+    height:550px;
+    width:1505px;
+    margin-top:-14px;
+    position:absolute;
+}
+label{
+    position: absolute;
+    font-size:35px;
+    color:yellow;
+    margin-left:680px;
+    margin-top:80px;
+}
+
+
+.right {
+width:300px;
+height:500px;
+}
+
+.left {
+    width:300px;
+    height:500px;
+    margin-left:1200px;
+    }
+
+    label{
+        text-align:center;
+    }
+

@@ -1,0 +1,27 @@
+<p><b>DETAILS OF EMPLOYEE</b></p>
+<img src="./assets/employee.png" alt="">
+<table border="1"class="table table-hover table-info" cellpadding="-40">
+    <thead >
+      <tr>
+        <th class="b" scope="col">Eid</th>
+        <th class="b" scope="col">Ename</th>
+        <th class="b" scope="col">Email</th>
+        <th class="b" scope="col">Role</th>
+        <th class="b" scope="col">Phone</th>
+        <th class="b" scope="col">Worklocation</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let emp of employees">
+        
+        <td>{{ emp.eid }}</td>
+        <td>{{ emp.ename }}</td>
+        <td>{{ emp.email }}</td>
+        <td>{{ emp.role }}</td>
+        <td>{{ emp.phone }}</td>
+        <td>{{ emp.worklocation }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  

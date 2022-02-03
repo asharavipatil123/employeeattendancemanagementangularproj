@@ -1,0 +1,112 @@
+<p>Employee attendance</p>
+<img src="././assets/employee.png" alt="">
+<form class="mymargin"  (ngSubmit)="onSubmit()" #myForm="ngForm">
+
+  <div class="form-group">
+    <label for="phone" class="col-sm-2 col-form-label">employeeid</label>
+    <input
+    placeholder="In String"
+      type="text"
+      class="form-control"
+      [(ngModel)]="attDetails.employeeid"
+      name="txtename"
+      #employeeid="ngModel"
+      pattern="^[a-zA-Z\s]{1,15}$"
+      required
+    />
+  </div>
+  <span
+  *ngIf="employeeid.invalid && employeeid.touched"
+    class="error form-control-feedback"
+    >Enter your employeeid</span
+  >
+
+  
+
+<div class="form-group">
+  <label for="date" class="col-sm-2 col-form-label">adate</label>
+  <input
+  id="date"
+    type="date"
+    class="form-control"
+    [(ngModel)]="attDetails.adate"
+    name="txtename"
+    #adate="ngModel"
+    
+    required
+  />
+</div>
+
+<span
+  *ngIf="adate.invalid && adate.touched"
+    class="error form-control-feedback"
+    >Enter your adate</span
+  >
+
+
+
+   <div class="form-group">
+    <label for="time" class="col-sm-2 col-form-label">logon</label>
+    <input
+    id="time"
+      type="time"
+      class="form-control"
+      [(ngModel)]="attDetails.logon"
+      name="txtename"
+      #logon="ngModel"
+      
+      required
+    />
+  </div>
+  <span
+  *ngIf="logon.invalid && logon.touched"
+    class="error form-control-feedback"
+    >Enter your logon</span
+  >
+
+  <div class="form-group">
+    <label for="time" class="col-sm-2 col-form-label">logoff</label>
+    <input
+    id="time"
+      type="time"
+      class="form-control"
+      [(ngModel)]="attDetails.logoff"
+      name="txtename"
+      #logoff="ngModel"
+      
+      required
+    />
+  </div>
+  <span
+  *ngIf="logoff.invalid && logoff.touched"
+    class="error form-control-feedback"
+    >Enter your logoff</span
+  >
+   
+  <div class="col-12">
+    <button 
+    
+    (click)="addAttDetail()"
+        [disabled]="!myForm.form.valid"
+        type="button"
+        class="btn btn-primary"
+        type="submit"
+      >
+    
+    Submit form</button>
+  </div>
+  <pre class="info">
+    Valid? {{ employeeid.valid }} 
+    Touched? {{ employeeid.touched }}
+    UnTouched? {{ employeeid.untouched }}
+    Dirty? {{ employeeid.dirty }}
+    Pristine? {{ employeeid.pristine }}
+  </pre>
+  
+    
+</form>
+
+
+
+
+

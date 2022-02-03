@@ -1,0 +1,27 @@
+<p>Leavereports works!</p>
+<table class="table">
+  <thead >
+    <tr>
+      <th class="b" scope="col">lid</th>
+      <th class="b" scope="col">empid</th>
+      <th class="b" scope="col">ltype</th>
+      <th class="b" scope="col">reason</th>
+      <th class="b" scope="col">fromdate</th>
+      <th class="b" scope="col">todate</th>
+      
+     
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let lv of leave">
+      
+      <td>{{ lv.lid }}</td>
+      <td>{{ lv.empid }}</td>
+      <td>{{ lv.ltype }}</td>
+      <td>{{ lv.reason }}</td>
+      <td>{{ lv.fromdate }}</td>
+      <td>{{ lv.todate }}</td>
+     
+    </tr>
+  </tbody>
+</table>

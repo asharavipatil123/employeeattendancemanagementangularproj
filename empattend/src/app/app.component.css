@@ -1,0 +1,8 @@
+.container-fluid{
+    color: black;
+}
+
+img{
+    opacity: calc(0.09);
+    position:absolute;
+}

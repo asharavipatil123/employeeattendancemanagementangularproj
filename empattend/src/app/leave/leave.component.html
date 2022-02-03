@@ -1,0 +1,112 @@
+<p>LEAVE</p>
+<img src="./assets/leave.jpg">
+
+
+<form class="mymargin"  (ngSubmit)="onSubmit()" #myForm="ngForm">
+
+<h1>LEAVE FORM</h1>
+<br>
+<div class="form-group">
+  <label for="phone" class="col-sm-2 col-form-label">employeeid</label>
+  <input
+    type="text"
+    class="form-control"
+    [(ngModel)]="leaveDetails.empid"
+    name="txtename"
+    #empid="ngModel"
+    pattern="^[a-zA-Z\s]{1,15}$"
+    required
+  />
+</div>
+<span
+*ngIf="empid.invalid && empid.touched"
+  class="error form-control-feedback"
+  >Enter your employeeid</span
+>
+
+<div class="form-group" >
+  <label for="ltype" class="col-sm-2 col-form-label">Type of leave</label>
+  <input
+  placeholder="Type of leave"
+    type="text"
+    class="form-control"
+    [(ngModel)]="leaveDetails.ltype"
+    name="txtename"
+    #ltype="ngModel"
+    pattern="^[a-zA-Z\s]{1,70}$"
+    required
+  />
+</div>
+
+
+
+  <div class="form-group" >
+    <label for="reason" class="col-sm-2 col-form-label"></label>
+    <input
+    placeholder="Reason for leave"
+      type="text"
+      class="form-control"
+      [(ngModel)]="leaveDetails.reason"
+      name="txtename"
+      #reason="ngModel"
+      pattern="^[a-zA-Z\s]{1,70}$"
+      required
+    />
+  </div>
+  
+    <div class="form-group">
+      <label for="date" class="col-sm-2 col-form-label">fromdate</label>
+      <input
+      id="date"
+        type="date"
+        class="form-control"
+        [(ngModel)]="leaveDetails.fromdate"
+        name="txtename"
+        #fromdate="ngModel"
+        pattern="^[a-zA-Z\s]{1,15}$"
+        required
+      />
+    </div>
+
+
+    
+    <div class="form-group">
+      <label for="date" class="col-sm-2 col-form-label">todate</label>
+      <input
+      id="date"
+        type="date"
+        class="form-control"
+        [(ngModel)]="leaveDetails.todate"
+        name="txtename"
+        #todate="ngModel"
+        pattern="^[a-zA-Z\s]{1,15}$"
+        required
+      />
+    </div>
+  
+
+  
+  
+    
+    <div class="col-12">
+      <button 
+      
+      (click)="addLeave()"
+          [disabled]="!myForm.form.valid"
+          type="button"
+          class="btn btn-primary"
+          type="submit"
+        >
+      
+      Submit form</button>
+    </div>
+
+<pre class="info">
+  Valid? {{ reason.valid }} 
+  Touched? {{ reason.touched }}
+  UnTouched? {{ reason.untouched }}
+  Dirty? {{ reason.dirty }}
+  Pristine? {{ reason.pristine }}
+</pre>
+
+</form>
